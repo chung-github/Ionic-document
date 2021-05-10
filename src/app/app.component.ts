@@ -1,22 +1,33 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import {Platform, ActionSheetController, AlertController} from 'ionic-angular';
+import {BasicPage as ModalBasicPage} from "../pages/modal/basic/pages";
+import {BasicPage as NavigationBasicPage} from "../pages/navigation/basic/pages";
+// menu
+import { BasicPage as MenuBasicPage } from '../pages/menu/basic/pages';
+import {BasicPage as LoadingBasicPage} from "../pages/loading/basic/pages";
+import {BasicPage as ListBasicPage} from "../pages/list/basic/pages";
+import {BasicPage as FABsBasicPage} from "../pages/FABs/basic/pages";
 
-import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootModal: any = ModalBasicPage;
+  rootNavigation: any = NavigationBasicPage;
+  rootMenu: any = MenuBasicPage;
+  rootLoading: any = LoadingBasicPage;
+  rootList: any = ListBasicPage;
+  rootFABs: any = FABsBasicPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
-    });
+  constructor(public platform: Platform,
+              public actionsheetCtrl: ActionSheetController,
+              public alerCtrl: AlertController
+              ) {
   }
+
+  startedModal(){
+
+  }
+
 }
 

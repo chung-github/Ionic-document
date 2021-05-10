@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Modals</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      Danh sách cầu thủ chơi hay nhất mùa 2021-2022
+    </ion-list-header>
+    <a ion-item (click)="openModal({charNum: 0})">
+      Phil Foden
+    </a>
+    <a ion-item (click)="openModal({charNum: 1})">
+      Bernardo Silva
+    </a>
+    <a ion-item (click)="openModal({charNum: 2})">
+      Kevin De Bruyne
+    </a>
+  </ion-list>
+
+</ion-content>

@@ -5,21 +5,66 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import {BasicPage as ModalBasicPage, ModalContentPage} from "../pages/modal/basic/pages";
+import {BasicPage as NavigationBasicPage, NavigationDetailsPage} from "../pages/navigation/basic/pages";
+import { BasicPage as MenuBasicPage } from '../pages/menu/basic/pages';
+import { PageOne as MenuPageOne } from '../pages/menu/basic/pages';
+import { PageTwo as MenuPageTwo } from '../pages/menu/basic/pages';
+import { PageThree as MenuPageThree } from '../pages/menu/basic/pages';
+import { BasicPage as LoadingBasicPage} from "../pages/loading/basic/pages";
+import { BasicPage as ListBasicPage} from "../pages/list/basic/pages";
+import {BasicPage as FABsBasicPage} from "../pages/FABs/basic/pages";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    ModalBasicPage,
+    ModalContentPage,
+    NavigationBasicPage,
+    NavigationDetailsPage,
+    MenuBasicPage,
+    MenuPageOne,
+    MenuPageTwo,
+    MenuPageThree,
+    LoadingBasicPage,
+    ListBasicPage,
+    FABsBasicPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+        statusbarPadding: true,
+      },
+      {
+        links: [
+          { component: ModalBasicPage, name: 'ModalBasicPage', segment: 'modal-basic' },
+          { component: ModalContentPage, name: 'ModalContentPage', segment: 'modal-content' },
+          { component: NavigationBasicPage, name: 'NavigationBasicPage', segment: 'navigation-basic' },
+          { component: NavigationDetailsPage, name: 'NavigationDetailsPage', segment: 'navigation-details' },
+          { component: MenuBasicPage, name: 'MenuBasicPage', segment: 'menu-basic' },
+          { component: MenuPageOne, name: 'MenuPageOne', segment: 'menu-one' },
+          { component: MenuPageTwo, name: 'MenuPageTwo', segment: 'menu-two' },
+          { component: MenuPageThree, name: 'MenuPageThree', segment: 'menu-three' },
+          { component: LoadingBasicPage, name: 'LoadingBasicPage', segment: 'loading-basic' },
+          { component: ListBasicPage, name: 'ListBasicPage', segment: 'list-basic' },
+          { component: FABsBasicPage, name: 'FABsBasicPage', segment: 'fabs-basic' }
+        ]
+      })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    ModalBasicPage,
+    ModalContentPage,
+    NavigationBasicPage,
+    NavigationDetailsPage,
+    MenuBasicPage,
+    MenuPageOne,
+    MenuPageTwo,
+    MenuPageThree,
+    LoadingBasicPage,
+    ListBasicPage,
+    FABsBasicPage
   ],
   providers: [
     StatusBar,
