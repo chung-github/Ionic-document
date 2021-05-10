@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
+import { LoadingController, MenuController } from 'ionic-angular';
 
-import { LoadingController } from 'ionic-angular';
-
-import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
+import { ModalController, Platform, NavController , NavParams, ViewController } from 'ionic-angular';
 
 
 @Component({
   templateUrl: 'template.html'
 })
 export class BasicPage {
-  constructor(public modalCtrl: ModalController, public loadingCtrl: LoadingController) { }
+  constructor(private menu: MenuController,public modalCtrl: ModalController, public loadingCtrl: LoadingController, public navCtrl: NavController, public navPrams: NavParams) { }
 
   openModal(characterNum) {
     let modal = this.modalCtrl.create(ModalContentPage, characterNum);
@@ -20,6 +19,9 @@ export class BasicPage {
       duration: 1000,
       dismissOnPageChange: true
     }).present();
+  }
+  openList(){
+     this.navCtrl.push("ListBasicPage");
   }
 }
 
@@ -72,4 +74,5 @@ export class ModalContentPage {
   dismiss(){
     this.viewCtrl.dismiss();
   }
+
 }

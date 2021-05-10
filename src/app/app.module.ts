@@ -7,14 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import {BasicPage as ModalBasicPage, ModalContentPage} from "../pages/modal/basic/pages";
 import {BasicPage as NavigationBasicPage, NavigationDetailsPage} from "../pages/navigation/basic/pages";
-import { BasicPage as MenuBasicPage } from '../pages/menu/basic/pages';
-import { PageOne as MenuPageOne } from '../pages/menu/basic/pages';
-import { PageTwo as MenuPageTwo } from '../pages/menu/basic/pages';
-import { PageThree as MenuPageThree } from '../pages/menu/basic/pages';
+import {MenuPage} from "../pages/menu/menu";
 import { BasicPage as LoadingBasicPage} from "../pages/loading/basic/pages";
 import { BasicPage as ListBasicPage} from "../pages/list/basic/pages";
 import {BasicPage as FABsBasicPage} from "../pages/FABs/basic/pages";
 import {BasicPage as ToggleBasicPage} from "../pages/toggle/basic/pages";
+import {BasicPage as SegmentBasicPage} from "../pages/segment/basic/pages";
+import {AboutPage} from "../pages/about/about";
 
 @NgModule({
   declarations: [
@@ -23,14 +22,13 @@ import {BasicPage as ToggleBasicPage} from "../pages/toggle/basic/pages";
     ModalContentPage,
     NavigationBasicPage,
     NavigationDetailsPage,
-    MenuBasicPage,
-    MenuPageOne,
-    MenuPageTwo,
-    MenuPageThree,
+    MenuPage,
     LoadingBasicPage,
     ListBasicPage,
     FABsBasicPage,
-    ToggleBasicPage
+    ToggleBasicPage,
+    SegmentBasicPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -43,14 +41,13 @@ import {BasicPage as ToggleBasicPage} from "../pages/toggle/basic/pages";
           { component: ModalContentPage, name: 'ModalContentPage', segment: 'modal-content' },
           { component: NavigationBasicPage, name: 'NavigationBasicPage', segment: 'navigation-basic' },
           { component: NavigationDetailsPage, name: 'NavigationDetailsPage', segment: 'navigation-details' },
-          { component: MenuBasicPage, name: 'MenuBasicPage', segment: 'menu-basic' },
-          { component: MenuPageOne, name: 'MenuPageOne', segment: 'menu-one' },
-          { component: MenuPageTwo, name: 'MenuPageTwo', segment: 'menu-two' },
-          { component: MenuPageThree, name: 'MenuPageThree', segment: 'menu-three' },
+          { component: MenuPage, name: 'MenuPage', segment: 'menu-basic' },
           { component: LoadingBasicPage, name: 'LoadingBasicPage', segment: 'loading-basic' },
           { component: ListBasicPage, name: 'ListBasicPage', segment: 'list-basic' },
           { component: FABsBasicPage, name: 'FABsBasicPage', segment: 'fabs-basic' },
-          { component: ToggleBasicPage, name: 'ToggleBasicPage', segment: 'toggle-basic' }
+          { component: ToggleBasicPage, name: 'ToggleBasicPage', segment: 'toggle-basic' },
+          { component: SegmentBasicPage, name: 'SegmentBasicPage', segment: 'segment-basic' },
+          { component: AboutPage, name: 'AboutPage', segment: 'about-basic' }
         ]
       })
   ],
@@ -61,19 +58,20 @@ import {BasicPage as ToggleBasicPage} from "../pages/toggle/basic/pages";
     ModalContentPage,
     NavigationBasicPage,
     NavigationDetailsPage,
-    MenuBasicPage,
-    MenuPageOne,
-    MenuPageTwo,
-    MenuPageThree,
+    MenuPage,
     LoadingBasicPage,
     ListBasicPage,
     FABsBasicPage,
-    ToggleBasicPage
+    ToggleBasicPage,
+    SegmentBasicPage,
+    AboutPage
   ],
   providers: [
+
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+
   ]
 })
 export class AppModule {}

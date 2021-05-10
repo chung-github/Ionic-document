@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle icon-only class="menuButton">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Menu
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="showAbout()">
+        about
+      </button>
+      <button ion-item (click)="showModal()">
+        Modal
+      </button>
+      <button ion-item (click)="showList()">
+        List
+      </button>
+      <button ion-item (click)="close()">
+        Close Menu
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav id="nav" #content></ion-nav>
