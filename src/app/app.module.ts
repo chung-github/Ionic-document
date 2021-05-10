@@ -14,6 +14,7 @@ import { PageThree as MenuPageThree } from '../pages/menu/basic/pages';
 import { BasicPage as LoadingBasicPage} from "../pages/loading/basic/pages";
 import { BasicPage as ListBasicPage} from "../pages/list/basic/pages";
 import {BasicPage as FABsBasicPage} from "../pages/FABs/basic/pages";
+import {BasicPage as ToggleBasicPage} from "../pages/toggle/basic/pages";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {BasicPage as FABsBasicPage} from "../pages/FABs/basic/pages";
     MenuPageThree,
     LoadingBasicPage,
     ListBasicPage,
-    FABsBasicPage
+    FABsBasicPage,
+    ToggleBasicPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import {BasicPage as FABsBasicPage} from "../pages/FABs/basic/pages";
           { component: MenuPageThree, name: 'MenuPageThree', segment: 'menu-three' },
           { component: LoadingBasicPage, name: 'LoadingBasicPage', segment: 'loading-basic' },
           { component: ListBasicPage, name: 'ListBasicPage', segment: 'list-basic' },
-          { component: FABsBasicPage, name: 'FABsBasicPage', segment: 'fabs-basic' }
+          { component: FABsBasicPage, name: 'FABsBasicPage', segment: 'fabs-basic' },
+          { component: ToggleBasicPage, name: 'ToggleBasicPage', segment: 'toggle-basic' }
         ]
       })
   ],
@@ -64,7 +67,8 @@ import {BasicPage as FABsBasicPage} from "../pages/FABs/basic/pages";
     MenuPageThree,
     LoadingBasicPage,
     ListBasicPage,
-    FABsBasicPage
+    FABsBasicPage,
+    ToggleBasicPage
   ],
   providers: [
     StatusBar,

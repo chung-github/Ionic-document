@@ -7,6 +7,7 @@ import { BasicPage as MenuBasicPage } from '../pages/menu/basic/pages';
 import {BasicPage as LoadingBasicPage} from "../pages/loading/basic/pages";
 import {BasicPage as ListBasicPage} from "../pages/list/basic/pages";
 import {BasicPage as FABsBasicPage} from "../pages/FABs/basic/pages";
+import {BasicPage as ToggleBasicPage} from "../pages/toggle/basic/pages";
 
 @Component({
   templateUrl: 'app.html'
@@ -18,6 +19,7 @@ export class MyApp {
   rootLoading: any = LoadingBasicPage;
   rootList: any = ListBasicPage;
   rootFABs: any = FABsBasicPage;
+  rootToggle: any = ToggleBasicPage;
 
   constructor(public platform: Platform,
               public actionsheetCtrl: ActionSheetController,
